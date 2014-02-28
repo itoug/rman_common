@@ -5,7 +5,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM "username_db_catalog".rc_rman_status
+  FROM PROD1.rc_rman_status
   UNION ALL
   SELECT row_level,
     operation,
@@ -13,7 +13,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM "username_db_catalog".rc_rman_status
+  FROM PROD2.rc_rman_status
   UNION ALL
   SELECT row_level,
     operation,
@@ -21,7 +21,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM "username_db_catalog".RC_RMAN_STATUS
+  FROM PROD3.RC_RMAN_STATUS
   UNION ALL
   SELECT row_level,
     operation,
@@ -29,4 +29,4 @@
     status,
     session_key,
     SESSION_RECID
-  FROM "username_db_catalog".RC_RMAN_STATUS;
+  FROM PROD4.RC_RMAN_STATUS;
