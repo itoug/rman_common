@@ -9,7 +9,7 @@
     start_time ,
     end_time ,
     SESSION_RECID
-  FROM "username_db_catalog".rc_rman_backup_job_details db_catalog1
+  FROM PROD1.rc_rman_backup_job_details PROD1
   WHERE start_time > sysdate - 7
   UNION ALL
   SELECT db_name ,
@@ -22,7 +22,7 @@
     start_time ,
     end_time ,
     SESSION_RECID
-  FROM "username_db_catalog".rc_rman_backup_job_details db_catalog2
+  FROM PROD2.rc_rman_backup_job_details PROD2
   WHERE start_time > sysdate - 7
   UNION ALL
   SELECT db_name ,
@@ -35,7 +35,7 @@
     start_time ,
     end_time ,
     SESSION_RECID
-  FROM "username_db_catalog".RC_RMAN_BACKUP_JOB_DETAILS db_catalog3
+  FROM PROD3.RC_RMAN_BACKUP_JOB_DETAILS PROD3
   UNION ALL
   SELECT db_name ,
     input_type ,
@@ -47,6 +47,6 @@
     start_time ,
     end_time ,
     SESSION_RECID
-  FROM "username_db_catalog"S.RC_RMAN_BACKUP_JOB_DETAILS db_catalog4
+  FROM PROD4.RC_RMAN_BACKUP_JOB_DETAILS PROD4
   WHERE start_time > sysdate - 7
   ORDER BY session_recid;
