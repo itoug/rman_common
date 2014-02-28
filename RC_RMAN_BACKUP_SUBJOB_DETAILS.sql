@@ -3,22 +3,22 @@
     input_type,
     status,
     SESSION_STAMP
-  FROM "username_db_catalog".rc_rman_backup_subjob_details
+  FROM PROD1.rc_rman_backup_subjob_details
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM "username_db_catalog".rc_rman_backup_subjob_details
+  FROM PROD2.rc_rman_backup_subjob_details
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM "username_db_catalog".RC_RMAN_BACKUP_SUBJOB_DETAILS
+  FROM PROD3.RC_RMAN_BACKUP_SUBJOB_DETAILS
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM "username_db_catalog".rc_rman_backup_subjob_details;
+  FROM PROD4.rc_rman_backup_subjob_details;
