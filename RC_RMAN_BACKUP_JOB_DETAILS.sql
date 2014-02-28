@@ -10,7 +10,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RC_RMAN_BACKUP_JOB_DETAILS" ("DB_NAM
     session_recid,
     session_stamp,
     INPUT_TYPE
-  FROM catcerityv.rc_rman_backup_job_details
+  FROM "username_db_catalog".rc_rman_backup_job_details
   UNION ALL
   SELECT db_name,
     start_time,
@@ -23,7 +23,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RC_RMAN_BACKUP_JOB_DETAILS" ("DB_NAM
     session_recid,
     session_stamp,
     INPUT_TYPE
-  FROM catwatfis.rc_rman_backup_job_details
+  FROM "username_db_catalog".rc_rman_backup_job_details
   UNION ALL
   SELECT db_name,
     start_time,
@@ -36,7 +36,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RC_RMAN_BACKUP_JOB_DETAILS" ("DB_NAM
     session_recid,
     session_stamp,
     INPUT_TYPE
-  FROM CATKIRA.RC_RMAN_BACKUP_JOB_DETAILS
+  FROM "username_db_catalog".RC_RMAN_BACKUP_JOB_DETAILS
   UNION ALL
   SELECT db_name,
     start_time,
@@ -49,4 +49,4 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RC_RMAN_BACKUP_JOB_DETAILS" ("DB_NAM
     session_recid,
     session_stamp,
     INPUT_TYPE
-  FROM catedmsfis.rc_rman_backup_job_details;
+  FROM "username_db_catalog".rc_rman_backup_job_details;
