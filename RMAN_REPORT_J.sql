@@ -9,7 +9,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RMAN_REPORT_J" ("DB_NAME", "BACKUP_O
   cast(start_time as date) as start_time ,
     cast(end_time as  date) as end_time ,
     SESSION_RECID
-  FROM catcerityv.rc_rman_backup_job_details cty1
+  FROM PROD1.rc_rman_backup_job_details PROD1
   WHERE start_time > sysdate - 7
   UNION ALL
   SELECT db_name ,
@@ -22,7 +22,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RMAN_REPORT_J" ("DB_NAME", "BACKUP_O
   cast(start_time as date) as start_time ,
     cast(end_time as  date) as end_time ,
     SESSION_RECID
-  FROM catwatfis.rc_rman_backup_job_details WAT
+  FROM PROD2.rc_rman_backup_job_details PROD2
   WHERE start_time > sysdate - 7
   UNION ALL
   SELECT db_name ,
@@ -35,7 +35,7 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RMAN_REPORT_J" ("DB_NAME", "BACKUP_O
   cast(start_time as date) as start_time ,
     cast(end_time as  date) as end_time ,
     SESSION_RECID
-  FROM CATKIRA.RC_RMAN_BACKUP_JOB_DETAILS JDE
+  FROM PROD3.RC_RMAN_BACKUP_JOB_DETAILS PROD3
   UNION ALL
   SELECT db_name ,
     input_type ,
@@ -47,6 +47,6 @@ CREATE OR REPLACE FORCE VIEW "RMAN_COMMON"."RMAN_REPORT_J" ("DB_NAME", "BACKUP_O
   cast(start_time as date) as start_time ,
     cast(end_time as  date) as end_time ,
     SESSION_RECID
-  FROM CATEDMSFIS.RC_RMAN_BACKUP_JOB_DETAILS EDMS
+  FROM PROD4.RC_RMAN_BACKUP_JOB_DETAILS PROD4
   WHERE start_time > sysdate - 7
   ORDER BY session_recid;
