@@ -3,22 +3,22 @@
     input_type,
     status,
     SESSION_STAMP
-  FROM catcerityv.rc_rman_backup_subjob_details
+  FROM "username_db_catalog".rc_rman_backup_subjob_details
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM catwatfis.rc_rman_backup_subjob_details
+  FROM "username_db_catalog".rc_rman_backup_subjob_details
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM CATKIRA.RC_RMAN_BACKUP_SUBJOB_DETAILS
+  FROM "username_db_catalog".RC_RMAN_BACKUP_SUBJOB_DETAILS
   UNION ALL
   SELECT operation,
     input_type,
     status,
     SESSION_STAMP
-  FROM catedmsfis.rc_rman_backup_subjob_details;
+  FROM "username_db_catalog".rc_rman_backup_subjob_details;
