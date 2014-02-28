@@ -5,7 +5,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM catcerityv.rc_rman_status
+  FROM "username_db_catalog".rc_rman_status
   UNION ALL
   SELECT row_level,
     operation,
@@ -13,7 +13,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM catkira.rc_rman_status
+  FROM "username_db_catalog".rc_rman_status
   UNION ALL
   SELECT row_level,
     operation,
@@ -21,7 +21,7 @@
     status,
     session_key,
     SESSION_RECID
-  FROM CATWATFIS.RC_RMAN_STATUS
+  FROM "username_db_catalog".RC_RMAN_STATUS
   UNION ALL
   SELECT row_level,
     operation,
@@ -29,4 +29,4 @@
     status,
     session_key,
     SESSION_RECID
-  FROM CATEDMSFIS.RC_RMAN_STATUS;
+  FROM "username_db_catalog".RC_RMAN_STATUS;
