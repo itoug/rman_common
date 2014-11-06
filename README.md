@@ -1,7 +1,7 @@
-rman_common
+rman common report views
 ===========
 
-rman_common
+rman common
 
 Installation steps:
 
